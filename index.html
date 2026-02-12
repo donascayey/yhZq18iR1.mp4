@@ -1,139 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Mad Content Viewer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- ULTRA SAFE META -->
-<meta name="referrer" content="no-referrer">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="robots" content="noindex,nofollow">
-
-<!-- Fluid Player -->
-<link rel="stylesheet" href="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.css">
-<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>  IN COMMENTS 👇🏿🔥 </title>
 
 <style>
-html,body{
-  margin:0;
-  padding:0;
-  background:#000;
-  font-family:Arial,Helvetica,sans-serif;
-  color:#fff;
-  height:100%;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.center{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    text-align: center;
+    padding: 16px;
 }
-.player-wrapper{
-  max-width:960px;
-  width:100%;
-  margin:auto;
-  text-align:center;
+
+/* Title */
+.video-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
-video{
-  width:100%;
-  height:auto;
-  max-height:70vh;
+
+/* Video Container (portrait lock) */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 420px;       /* desktop: tidak kegedean */
+    margin: 0 auto;
+    aspect-ratio: 9 / 16;  /* KUNCI portrait */
+    background: #000;
+    border-radius: 14px;
+    overflow: hidden;
 }
-.ad{
-  margin:10px auto;
+
+/* Video */
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #000;
+    border-radius: 14px;
+
+    /* Disable user interaction fullscreen */
+    pointer-events: auto;
 }
-.blink{
-  animation:blink 1.2s infinite;
+
+/* HILANGKAN FULLSCREEN BUTTON */
+video::-webkit-media-controls-fullscreen-button {
+    display: none !important;
 }
-@keyframes blink{
-  0%,100%{opacity:1}
-  50%{opacity:.3}
+video::-webkit-media-controls-picture-in-picture-button {
+    display: none !important;
 }
-.btn{
-  display:inline-block;
-  margin:15px auto;
-  padding:14px 28px;
-  background:#ff2b2b;
-  color:#fff;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:bold;
+video::-webkit-media-controls-enclosure {
+    overflow: hidden;
 }
-.btn:hover{background:#ff4d4d}
+
+/* Ad overlay */
+.ad-overlay {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 50px;
+    z-index: 10;
+}
+.ad-top {
+    top: 10px;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .video-wrapper {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<div id="home" class="center" style="display:none">
-  <a href="https://www.google.com" class="btn blink">Content Viewer</a>
+<div class="video-title">
+    You’d never guess what happens at Mom's... keep watching. 🔥
 </div>
 
-<div id="player" style="display:none">
-  <div class="player-wrapper">
+<div class="video-wrapper">
 
-    <!-- ADS TOP 320x50 -->
-    <div class="ad">
-      <script>
-  atOptions = {
-    'key' : 'dae87a9f0396af430e6356cc8d20e1ce',
+    <!-- TOP ADS -->
+    <div class="ad-overlay ad-top">
+<script>
+    atOptions = {
+    'key' : '4a2fc598ebbbdbc95eb3bef73798c939',
     'format' : 'iframe',
     'height' : 50,
     'width' : 320,
     'params' : {}
   };
 </script>
-<script src="https://hypothesisgarden.com/dae87a9f0396af430e6356cc8d20e1ce/invoke.js"></script>
+<script src="https://nailsheedlesswarn.com/4a2fc598ebbbdbc95eb3bef73798c939/invoke.js"></script>
     </div>
 
-    <video id="video" controls playsinline preload="metadata"></video>
+    <!-- VIDEO -->
+    <video
+        autoplay
+        loop
+        muted
+        playsinline
+        controls
+        controlsList="nodownload noremoteplayback nofullscreen"
+        disablePictureInPicture
+        poster="https://cdn.videy.co/yhZq18iR1.mp4"
+    >
+        <source src="https://cdn.videy.co/yhZq18iR1.mp4" type="video/mp4">
+    </video>
 
-    <!-- ADS BOTTOM 468x60 -->
-<script async="async" data-cfasync="false" src="https://hypothesisgarden.com/c41a23ff90a4cb9a439bd54b5d951bc3/invoke.js"></script>
-<div id="container-c41a23ff90a4cb9a439bd54b5d951bc3"></div>
-    </div>
-
-    <a href="https://hypothesisgarden.com/gh7u2f5i?key=5204a32a3b7250a909e95ef35e634e30" class="btn blink">Watch More</a>
-  </div>
 </div>
+  <header>
+<script src="https://nailsheedlesswarn.com/21/7a/cd/217acd50d4e42475eb7be554d1d981f8.js"></script>
+  </header>
 
-<script>
-(function(){
-  const q = new URLSearchParams(window.location.search);
-  const vid = q.get("v");
+  <footer>
+    © 2025 Blacked Streaming. All rights reserved.
+  </footer>
 
-  if(!vid){
-    document.getElementById("home").style.display="flex";
-    return;
-  }
+  <script>
+    // Cegah masuk fullscreen lewat JavaScript
+    document.addEventListener('fullscreenchange', () => {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      }
+    });
 
-  const video = document.getElementById("video");
+    // Proteksi klik kanan dan F12
+    (function () {
+      document.addEventListener('contextmenu', function (e) {
+        if (!e.target.closest('.allow-context, iframe')) {
+          e.preventDefault();
+        }
+      });
 
-  // CDN AUTO DETECT
-  let src="";
-  if(vid.length > 8){
-    src = "https://cdn.slicedrive.com/" + vid + ".mp4";
-  }else{
-    src = "https://cdn.aceimg.com/" + vid + ".mp4";
-  }
+      document.addEventListener('keydown', function (e) {
+        if (e.key === "F12") e.preventDefault();
+        if (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key.toUpperCase())) e.preventDefault();
+        if (e.ctrlKey && ["U","S"].includes(e.key.toUpperCase())) e.preventDefault();
+      });
+    })();
+  </script>
 
-  video.src = src;
-  document.getElementById("player").style.display="block";
 
-  fluidPlayer("video",{
-    layoutControls:{
-      fillToContainer:true,
-      autoPlay:false,     // FACEBOOK SAFE
-      mute:false,
-      allowDownload:false,
-      playbackRateEnabled:false,
-      posterImage:""
-    }
-  });
-
-})();
-</script>
    <!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,5007039,4,0,0,0,00010000']);
@@ -146,5 +170,6 @@ hs.src = ('//s10.histats.com/js15_as.js');
 })();</script>
 <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5007039&101" alt="" border="0"></a></noscript>
 <!-- Histats.com  END  -->
+
 </body>
 </html>
