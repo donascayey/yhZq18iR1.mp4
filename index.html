@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mad Content Viewer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ULTRA SAFE META -->
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex,nofollow">
+
+<!-- Fluid Player -->
+<link rel="stylesheet" href="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.css">
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+
+<style>
+html,body{
+  margin:0;
+  padding:0;
+  background:#000;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#fff;
+  height:100%;
+}
+.center{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+.player-wrapper{
+  max-width:960px;
+  width:100%;
+  margin:auto;
+  text-align:center;
+}
+video{
+  width:100%;
+  height:auto;
+  max-height:70vh;
+}
+.ad{
+  margin:10px auto;
+}
+.blink{
+  animation:blink 1.2s infinite;
+}
+@keyframes blink{
+  0%,100%{opacity:1}
+  50%{opacity:.3}
+}
+.btn{
+  display:inline-block;
+  margin:15px auto;
+  padding:14px 28px;
+  background:#ff2b2b;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+}
+.btn:hover{background:#ff4d4d}
+</style>
+</head>
+
+<body>
+
+<div id="home" class="center" style="display:none">
+  <a href="https://www.google.com" class="btn blink">Content Viewer</a>
+</div>
+
+<div id="player" style="display:none">
+  <div class="player-wrapper">
+
+    <!-- ADS TOP 320x50 -->
+    <div class="ad">
+      <script>
+  atOptions = {
+    'key' : 'dae87a9f0396af430e6356cc8d20e1ce',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://hypothesisgarden.com/dae87a9f0396af430e6356cc8d20e1ce/invoke.js"></script>
+    </div>
+
+    <video id="video" controls playsinline preload="metadata"></video>
+
+    <!-- ADS BOTTOM 468x60 -->
+<script async="async" data-cfasync="false" src="https://hypothesisgarden.com/c41a23ff90a4cb9a439bd54b5d951bc3/invoke.js"></script>
+<div id="container-c41a23ff90a4cb9a439bd54b5d951bc3"></div>
+    </div>
+
+    <a href="https://www.videosprofitnetwork.com/watch.xml?key=587387b6c6e19b7be89b4ad3846ebd77" class="btn blink">Watch More</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  const q = new URLSearchParams(window.location.search);
+  const vid = q.get("v");
+
+  if(!vid){
+    document.getElementById("home").style.display="flex";
+    return;
+  }
+
+  const video = document.getElementById("video");
+
+  // CDN AUTO DETECT
+  let src="";
+  if(vid.length > 8){
+    src = "https://cdn.slicedrive.com/" + vid + ".mp4";
+  }else{
+    src = "https://cdn.aceimg.com/" + vid + ".mp4";
+  }
+
+  video.src = src;
+  document.getElementById("player").style.display="block";
+
+  fluidPlayer("video",{
+    layoutControls:{
+      fillToContainer:true,
+      autoPlay:false,     // FACEBOOK SAFE
+      mute:false,
+      allowDownload:false,
+      playbackRateEnabled:false,
+      posterImage:""
+    }
+  });
+
+})();
+</script>
+   <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5007039,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5007039&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+</html>
